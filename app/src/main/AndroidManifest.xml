@@ -10,12 +10,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.EasyMeldelist"
-        android:name="EasyMeldelist">
+        android:theme="@style/Theme.BahnFrei"
+        android:name="BahnFrei">
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.EasyMeldelist.Splash"
+            android:theme="@style/Theme.BahnFrei"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>

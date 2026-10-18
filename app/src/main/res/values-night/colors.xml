@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Entspricht dem Material-3-Standardhintergrund (dunkel) -->
+    <color name="splash_background">#1A1C1E</color>
+</resources>
+

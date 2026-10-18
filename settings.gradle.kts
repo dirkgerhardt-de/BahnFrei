@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "EasyMeldelist"
+rootProject.name = "BahnFrei"
 include(":app")

@@ -1,3 +1,207 @@
 <resources>
-    <string name="app_name">EasyMeldelist</string>
+    <string name="app_name">BahnFrei</string>
+
+    <string name="title_einstellungen">Einstellungen</string>
+    <string name="title_appearance">Erscheinungsbild</string>
+    <string name="title_medaillenchancen">Medaillenchancen</string>
+    <string name="title_sprache">Sprache</string>
+    <string name="title_gespeicherte_teilnehmer">Gespeicherte Teilnehmer</string>
+    <string name="title_suchergebnis">Suchergebnis</string>
+    <string name="title_meldelisten">Meldelisten</string>
+    <string name="title_neue_meldeliste">Neue Meldeliste</string>
+    <string name="title_speichern_erfolgreich">Speichern erfolgreich</string>
+    <string name="sprache_deutsch">Deutsch</string>
+    <string name="sprache_english">Englisch</string>
+
+    <!-- Allgemein -->
+    <string name="cd_zurueck">Zurück</string>
+    <string name="cd_einstellungen">Einstellungen</string>
+    <string name="cd_erfolg">Erfolg</string>
+    <string name="cd_logo">BahnFrei Logo</string>
+    <string name="abbrechen">Abbrechen</string>
+    <string name="speichern">Speichern</string>
+
+    <!-- Home / Branding / Bibliothek -->
+    <string name="home_titel">Schwimm-Meldelisten</string>
+    <string name="btn_neue_meldeliste">Neue Meldeliste hochladen</string>
+    <string name="branding_claim">Rein ins Wasser · rauf aufs Podium!</string>
+    <string name="library_leer">Noch keine Meldelisten hochgeladen.</string>
+
+    <!-- Einstellungen -->
+    <string name="settings_beschr_appearance">Theme und Dynamic Color</string>
+    <string name="settings_beschr_chancen">Anzeige, Motivation und Perspektive-Medaille</string>
+    <string name="settings_beschr_sprache">Deutsch oder Englisch</string>
+    <string name="appearance_theme">Theme</string>
+    <string name="theme_system">System</string>
+    <string name="theme_system_beschr">Folgt der Hell-/Dunkel-Einstellung des Geräts</string>
+    <string name="theme_hell">Hell</string>
+    <string name="theme_hell_beschr">Immer helles Design</string>
+    <string name="theme_dunkel">Dunkel</string>
+    <string name="theme_dunkel_beschr">Immer dunkles Design</string>
+    <string name="dynamic_color">Dynamic Color</string>
+    <string name="dynamic_color_beschr">Die Themenfarbe des Systemhintergrunds verwenden</string>
+    <string name="chancen_anzeige">Anzeige der Chancen</string>
+    <string name="chancen_medaillen_beschr">Anzeige wahrscheinlichste Medaille und Perspektive-Medaille</string>
+    <string name="chancen_pro_titel">Pro-Modus</string>
+    <string name="chancen_pro_beschr">Exakte Prozentwerte für Gold, Silber, Bronze und Gesamt</string>
+    <string name="chancen_motivation_titel">Motivation bei geringen Chancen</string>
+    <string name="chancen_motivation_beschr">Wenn keine realistische Medaillenchance besteht (&lt;50 % Gesamt), wird stattdessen ein Motivationstext angezeigt.</string>
+    <string name="chancen_perspektive">Perspektiv-Medaille</string>
+    <string name="chancen_perspektive_zeigen">Perspektive zeigen ab:</string>
+    <string name="chancen_perspektive_hilfe">Mindest-Chance der BESSEREN Medaille, ab der sie als Perspektive angezeigt wird.\n\nEmpfohlen: 20 % (empirische Schwelle)\nNiedriger = öfter Perspektive (mehr Aufstiegs-Motivation)\nHöher = konservativer (nur deutliche Aufstiegsmöglichkeiten)</string>
+
+    <!-- Upload -->
+    <string name="upload_lade_gespeichert">Öffne gespeicherte Daten…</string>
+    <string name="upload_analysiere">Analysiere Meldeliste…</string>
+    <string name="upload_fehler_lesen">Fehler beim Lesen: %1$s</string>
+    <string name="upload_lade_datei">Lade Datei…</string>
+    <string name="upload_schritt1">Schritt 1: Meldeliste auswählen</string>
+    <string name="upload_pdf_waehlen">PDF auswählen…</string>
+    <string name="upload_datei_gewaehlt">✓ %1$s</string>
+    <string name="upload_schritt2">Schritt 2: Schwimmer suchen</string>
+    <string name="upload_verein">Verein</string>
+    <string name="upload_verein_platzhalter">(optional – alle Vereine)</string>
+    <string name="upload_nachname">Nachname</string>
+    <string name="upload_vorname">Vorname</string>
+    <string name="upload_suchen">Suchen</string>
+    <string name="upload_bitte_warten">Bitte warten…</string>
+
+    <!-- Ergebnisse / Gespeichert -->
+    <string name="results_gespeichert">Die Ergebnisse wurden gespeichert.</string>
+    <string name="results_anzeigen">Ergebnisse anzeigen</string>
+    <string name="results_neue_suche">Neue Suche</string>
+    <string name="results_fehler">Fehler: %1$s</string>
+    <string name="results_keine">Keine Meldungen gefunden.</string>
+    <string name="results_name">%1$s, %2$s</string>
+    <string name="results_name_verein">%1$s, %2$s – %3$s</string>
+    <string name="saved_name_verein">%1$s – %2$s</string>
+    <string name="tag_nr">Tag %1$d</string>
+    <string name="wettkampf_titel">Wettkampf %1$s – %2$sm %3$s</string>
+    <string name="lauf_bahn">Lauf %1$s – Bahn %2$s</string>
+    <string name="lade_daten">Lade Daten für\n%1$s, %2$s</string>
+    <string name="schwimmart_freistil">Freistil</string>
+    <string name="schwimmart_brust">Brust</string>
+    <string name="schwimmart_ruecken">Rücken</string>
+    <string name="schwimmart_schmetterling">Schmetterling</string>
+    <string name="schwimmart_lagen">Lagen</string>
+    <string name="saved_keine">Keine gespeicherten Meldungen gefunden.</string>
+    <string name="saved_meldezeit">Meldezeit: %1$s</string>
+    <string name="participants_hinzufuegen">Teilnehmer hinzufügen</string>
+    <string name="participants_leer">Keine gespeicherten Teilnehmer für diese Datei.</string>
+
+    <!-- Medaillen und Chancen -->
+    <string name="medaille_gold">Gold</string>
+    <string name="medaille_silber">Silber</string>
+    <string name="medaille_bronze">Bronze</string>
+    <string name="chance_satz">%1$s %2$s ist %3$s</string>
+    <string name="chance_perspektive">%1$s %2$s %3$s</string>
+    <string name="prozent_zeile">Gold %1$d%% · Silber %2$d%% · Bronze %3$d%% · Gesamt %4$d%%</string>
+    <string name="wertung_zum_greifen_nah">%1$s ist zum Greifen nah</string>
+
+    <string-array name="chance_haupt_hoch">
+        <item>on fire</item>
+        <item>locked</item>
+        <item>done deal</item>
+        <item>im Kasten</item>
+        <item>abgezählt</item>
+        <item>going crazy</item>
+    </string-array>
+    <string-array name="chance_haupt_mittel">
+        <item>solid</item>
+        <item>drin</item>
+        <item>real</item>
+        <item>stabil</item>
+        <item>im Plan</item>
+        <item>im Flow</item>
+    </string-array>
+    <string-array name="chance_haupt_niedrig">
+        <item>on the table</item>
+        <item>greifbar</item>
+        <item>good shot</item>
+        <item>im Spiel</item>
+        <item>lowkey real</item>
+        <item>nicht unwahrscheinlich</item>
+    </string-array>
+    <string-array name="chance_schluss">
+        <item>bei maximum Power</item>
+        <item>bei Vollgas</item>
+        <item>wenn alles aufgeht</item>
+        <item>mit Turbo</item>
+        <item>in Bestform</item>
+        <item>im Rausch des Tages</item>
+    </string-array>
+
+    <string-array name="wertung_unter10">
+        <item>Ein kleiner Funke Hoffnung aufs Treppchen glimmt</item>
+        <item>Ein Funke Hoffnung bleibt bestehen</item>
+        <item>Ein Hauch von Hoffnung aufs Podium</item>
+        <item>Nichts ist unmöglich – glaub daran!</item>
+    </string-array>
+    <string-array name="wertung_unter20">
+        <item>Du bist der Geheimtipp</item>
+        <item>Für dieses Rennen bist du der Geheimtipp</item>
+        <item>Ein echter Geheimtipp heute</item>
+        <item>Niemand hat dich auf dem Zettel, zeig was in dir steckt</item>
+    </string-array>
+    <string-array name="wertung_unter30">
+        <item>Du bist die Überraschungswaffe</item>
+        <item>Heute kannst du alle überraschen</item>
+        <item>Viele rechnen noch nicht mit dir</item>
+        <item>Zeig dem Feld, wer du bist</item>
+    </string-array>
+    <string-array name="wertung_unter40">
+        <item>Eine echte Möglichkeit aufs Treppchen hast du</item>
+        <item>Das Treppchen ist heute wirklich drin</item>
+        <item>Ein Platz auf dem Podium ist möglich</item>
+        <item>Bronze liegt in deiner Reichweite</item>
+    </string-array>
+    <string-array name="wertung_ohne_medaille">
+        <item>Eine realistische Chance aufs Treppchen hast du</item>
+        <item>Mit etwas Glück landest du vorne</item>
+        <item>Dein Platz auf dem Podium ist heute denkbar</item>
+        <item>Die Medaillenränge sind zum Greifen nah</item>
+    </string-array>
+    <string-array name="wertung_unter60">
+        <item>Du hast gute Aussichten auf</item>
+        <item>Die Chancen stehen gut für</item>
+        <item>Da wäre etwas zu holen:</item>
+        <item>Ein Medaillenplatz ist zum Greifen nah:</item>
+    </string-array>
+    <string-array name="wertung_unter70">
+        <item>Du hast eine hohe Chance auf</item>
+        <item>Sehr wahrscheinlich gibt es heute</item>
+        <item>Bereite dich aufs Treppchen vor –</item>
+        <item>Heute gehört dir mit hoher Wahrscheinlichkeit</item>
+    </string-array>
+    <string-array name="wertung_unter80">
+        <item>Du hast richtig gute Karten für</item>
+        <item>Die Voraussetzungen sind hervorragend für</item>
+        <item>Deine Position im Feld ist stark –</item>
+        <item>Fast schon ein sicherer Platz für</item>
+    </string-array>
+    <string-array name="wertung_unter90">
+        <item>Du hast beste Aussichten auf</item>
+        <item>So gut wie sicher gibt es heute</item>
+        <item>Das Feld muss dich fürchten um</item>
+        <item>Praktisch niemand nimmt dir</item>
+    </string-array>
+
+    <string-array name="motivationssprueche">
+        <item>Wenn du alles gibst, ist alles möglich!</item>
+        <item>Große Schwimmer fingen auch mit einem Start an.</item>
+        <item>Heute ist der Tag, an dem du überraschst!</item>
+        <item>Jedes Rennen ist eine neue Chance – zeig, was in dir steckt!</item>
+        <item>Der Wille zählt mehr als die Zeit auf dem Papier.</item>
+        <item>Wasser ist dein Element – schwimm frei und mutig!</item>
+        <item>Übung macht den Meister, Mut macht den Sieger!</item>
+        <item>Die Besten waren auch mal Außenseiter!</item>
+        <item>Glaub an dich – die Uhr tickt für alle gleich!</item>
+        <item>Deine Bestzeit wartet noch auf dich!</item>
+        <item>Jeder Start bringt dich näher ans Ziel!</item>
+        <item>Nicht die Zeit entscheidet, sondern dein Einsatz!</item>
+        <item>Trau dir etwas zu – du hast das Potential!</item>
+        <item>Heute zählt jeder Meter, jede Bewegung!</item>
+        <item>Dein Team glaubt an dich – jetzt sei du selbst!</item>
+    </string-array>
 </resources>
+

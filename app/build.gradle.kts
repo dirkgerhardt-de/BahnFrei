@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "de.dirkgerhardt.easymeldelist"
+    namespace = "de.dirkgerhardt.bahnfrei"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "de.dirkgerhardt.easymeldelist"
+        applicationId = "de.dirkgerhardt.bahnfrei"
         minSdk = 29
         targetSdk = 37
         versionCode = 1

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Dunkelmodus: Start-Hintergrund exakt wie der App-Hintergrund in Theme.kt (#25282D) -->
+    <style name="Theme.BahnFrei" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">#FF25282D</item>
+    </style>
+</resources>
+

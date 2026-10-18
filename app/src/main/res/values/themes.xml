@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.EasyMeldelist" parent="android:Theme.Material.Light.NoActionBar" />
-    <style name="Theme.EasyMeldelist.Splash" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/splash_background</item>
-        <item name="windowSplashScreenAnimatedIcon">@android:color/transparent</item>
-        <!-- Icon-Hintergrund ebenfalls auf Splash-Blau: Kreis wird unsichtbar -->
-        <item name="windowSplashScreenIconBackgroundColor">@color/splash_background</item>
-        <item name="postSplashScreenTheme">@style/Theme.EasyMeldelist</item>
+    <style name="Theme.BahnFrei" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/app_background</item>
     </style>
 </resources>

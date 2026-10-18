@@ -1,0 +1,10 @@
+package de.dirkgerhardt.bahnfrei.data
+
+/** Wahrscheinlichkeiten pro Metall und gesamt. */
+data class MedaillenChancen(
+    val gold: Double,
+    val silber: Double,
+    val bronze: Double
+) {
+    val gesamt: Double get() = gold + silber + bronze
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android 12+ im Dunkelmodus: Startbild exakt wie der App-Hintergrund (#25282D) -->
+    <style name="Theme.BahnFrei" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">#FF25282D</item>
+        <item name="android:windowSplashScreenBackground">#FF25282D</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@android:color/transparent</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">#FF25282D</item>
+    </style>
+</resources>
+

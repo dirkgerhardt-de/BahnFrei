@@ -7,5 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="splash_background">#86C7EB</color>
+    <!-- Marineblau, identisch mit der App-Primärfarbe (Hell) -->
+    <color name="splash_background">#1F4E79</color>
+    <!-- Hintergrund der App (Hell), damit Startbildschirm und App nahtlos ineinander übergehen -->
+    <color name="app_background">#FDFCFF</color>
 </resources>
