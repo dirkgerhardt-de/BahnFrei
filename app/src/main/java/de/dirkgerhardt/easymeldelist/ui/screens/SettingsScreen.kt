@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import de.dirkgerhardt.easymeldelist.data.AnzeigeModus
 import de.dirkgerhardt.easymeldelist.data.SettingsRepository
+import de.dirkgerhardt.easymeldelist.data.ThemeModus
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -43,6 +44,63 @@ fun SettingsScreen(navController: NavController) {
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Text(
+                "Appearance",
+                style = MaterialTheme.typography.titleMedium,
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+            )
+
+            ModusOption(
+                titel = "System",
+                beschreibung = "Folgt der Hell-/Dunkel-Einstellung des Geräts",
+                selected = settings.themeModus == ThemeModus.SYSTEM,
+                onClick = { repo.setThemeModus(ThemeModus.SYSTEM) }
+            )
+
+            ModusOption(
+                titel = "Hell",
+                beschreibung = "Immer helles Design",
+                selected = settings.themeModus == ThemeModus.HELL,
+                onClick = { repo.setThemeModus(ThemeModus.HELL) }
+            )
+
+            ModusOption(
+                titel = "Dunkel",
+                beschreibung = "Immer dunkles Design",
+                selected = settings.themeModus == ThemeModus.DUNKEL,
+                onClick = { repo.setThemeModus(ThemeModus.DUNKEL) }
+            )
+
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp)
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 12.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Column(Modifier.weight(1f)) {
+                        Text(
+                            "Dynamic Color",
+                            style = MaterialTheme.typography.titleMedium
+                        )
+                        Text(
+                            "Die Themenfarbe des Systemhintergrunds verwenden",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                    Switch(
+                        checked = settings.dynamicColor,
+                        onCheckedChange = { repo.setDynamicColor(it) }
+                    )
+                }
+            }
+
+
+            Text(
                 "Anzeige der Chancen",
                 style = MaterialTheme.typography.titleMedium,
                 modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
@@ -61,8 +119,6 @@ fun SettingsScreen(navController: NavController) {
                 selected = settings.modus == AnzeigeModus.PRO,
                 onClick = { repo.setModus(AnzeigeModus.PRO) }
             )
-
-            Divider(modifier = Modifier.padding(vertical = 8.dp))
 
             // Motivation bei geringer Gesamtchance (<50 %)
             Card(

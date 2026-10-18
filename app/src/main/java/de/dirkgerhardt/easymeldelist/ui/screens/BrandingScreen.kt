@@ -63,7 +63,7 @@ fun BrandingScreen(onFinished: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF86C7EB)),
+            .background(Color(0xFFD6E6F5)),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -75,10 +75,10 @@ fun BrandingScreen(onFinished: () -> Unit) {
                 .alpha(logoAlpha)
         )
         Text(
-            text = "Melden · Mitmachen · Medaille!",
+            text = "Rein · Raus · Medaille!",
             fontSize = 22.sp,
             fontWeight = FontWeight.Bold,
-            color = Color(0xFF2C3E50),  // ← HIER geändert: garantierter Kontrast auf #86C7EB
+            color = Color(0xFF1F3F5A),  // Kontrast auf Pastellblau
             modifier = Modifier
                 .padding(top = 24.dp)
                 .alpha(textAlpha)

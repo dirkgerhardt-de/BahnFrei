@@ -4,14 +4,21 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.core.view.WindowCompat
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import de.dirkgerhardt.easymeldelist.data.SettingsRepository
+import de.dirkgerhardt.easymeldelist.data.ThemeModus
 import de.dirkgerhardt.easymeldelist.ui.SavedParticipantsScreen
 import de.dirkgerhardt.easymeldelist.ui.screens.BrandingScreen
 import de.dirkgerhardt.easymeldelist.ui.screens.HomeScreen
@@ -31,7 +38,25 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            EasyMeldelistTheme {
+            // Instanziierung lädt die gespeicherten Einstellungen in den StateFlow
+            remember { SettingsRepository(applicationContext) }
+            val settings by SettingsRepository.settings.collectAsState()
+            val darkTheme = when (settings.themeModus) {
+                ThemeModus.SYSTEM -> isSystemInDarkTheme()
+                ThemeModus.HELL -> false
+                ThemeModus.DUNKEL -> true
+            }
+
+            EasyMeldelistTheme(darkTheme = darkTheme, dynamicColor = settings.dynamicColor) {
+                // Statusleisten-Icons (Akku, Uhr, Netz) an das Theme anpassen:
+                // Hell -> dunkle Icons, Dunkel -> helle Icons
+                SideEffect {
+                    WindowCompat.getInsetsController(window, window.decorView).apply {
+                        isAppearanceLightStatusBars = !darkTheme
+                        isAppearanceLightNavigationBars = !darkTheme
+                    }
+                }
+
                 val showBranding = remember { mutableStateOf(true) }
 
                 if (showBranding.value) {

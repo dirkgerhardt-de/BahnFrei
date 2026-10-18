@@ -1,6 +1,8 @@
 package de.dirkgerhardt.easymeldelist.ui.screens
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -20,6 +22,14 @@ fun HomeScreen(navController: NavController) {
                         "EasyMeldelist",
                         fontWeight = FontWeight.Bold
                     )
+                },
+                actions = {
+                    IconButton(onClick = { navController.navigate("settings") }) {
+                        Icon(
+                            imageVector = Icons.Filled.Settings,
+                            contentDescription = "Einstellungen"
+                        )
+                    }
                 }
             )
         }

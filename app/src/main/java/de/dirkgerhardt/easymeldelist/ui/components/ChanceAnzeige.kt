@@ -110,7 +110,7 @@ private fun nuechternerText(
 
     return if (perspektive != null) {
         "${perspektive.emoji} ${perspektive.displayName} ${schlussPool[idxSchluss]}" +
-                " – " +
+                " · " +
                 "${medaille.emoji} ${medaille.displayName} ist ${hauptPool[idxHaupt]}"
     } else {
         "${medaille.emoji} ${medaille.displayName} ist ${hauptPool[idxHaupt]}"

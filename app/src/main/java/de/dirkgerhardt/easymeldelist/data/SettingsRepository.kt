@@ -12,7 +12,16 @@ enum class AnzeigeModus {
     PRO
 }
 
+enum class ThemeModus {
+    SYSTEM,
+    HELL,
+    DUNKEL
+}
+
 data class AppSettings(
+    val themeModus: ThemeModus = ThemeModus.SYSTEM,
+    /** Material 3 Dynamic Color (Android 12+) */
+    val dynamicColor: Boolean = true,
     val modus: AnzeigeModus = AnzeigeModus.MEDAILLENCHANCEN,
     /**
      * ZENTRALE EINSTELLUNG: Mindest-Wahrscheinlichkeit (0.0–1.0) der BESSEREN
@@ -33,10 +42,27 @@ class SettingsRepository(context: Context) {
 
     init {
         _settings.value = AppSettings(
+            themeModus = leseThemeModus(),
+            dynamicColor = prefs.getBoolean(KEY_DYNAMIC_COLOR, false),
             modus = leseModus(),
             perspektiveSchwelle = lesePerspektiveSchwelle(),
             motivationAnzeigen = leseMotivationAnzeigen()
         )
+    }
+
+    private fun leseThemeModus(): ThemeModus {
+        val gespeichert = prefs.getString(KEY_THEME, null) ?: return ThemeModus.SYSTEM
+        return runCatching { ThemeModus.valueOf(gespeichert) }.getOrDefault(ThemeModus.SYSTEM)
+    }
+
+    fun setThemeModus(neu: ThemeModus) {
+        prefs.edit().putString(KEY_THEME, neu.name).apply()
+        _settings.value = _settings.value.copy(themeModus = neu)
+    }
+
+    fun setDynamicColor(neu: Boolean) {
+        prefs.edit().putBoolean(KEY_DYNAMIC_COLOR, neu).apply()
+        _settings.value = _settings.value.copy(dynamicColor = neu)
     }
 
     private fun leseModus(): AnzeigeModus {
@@ -79,6 +105,8 @@ class SettingsRepository(context: Context) {
 
     companion object {
         private const val PREFS_NAME = "easymeldelist_settings"
+        private const val KEY_THEME = "theme_modus"
+        private const val KEY_DYNAMIC_COLOR = "dynamic_color"
         private const val KEY_MODUS = "anzeige_modus"
         private const val KEY_PERSPEKTIVE = "perspektive_schwelle"
         private const val KEY_MOTIVATION = "motivation_anzeigen"
