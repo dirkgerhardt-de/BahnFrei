@@ -2,10 +2,8 @@
 
 # BahnFrei
 
-BahnFrei ist eine Android-App zur Verwaltung von Schwimmer-Meldelisten.
-Sie hilft Trainern und Eltern, Teilnehmer für Wettkämpfe zu verwalten und
-zeigt auf Basis der Meldezeiten eine Prognose der Medaillenchancen an.
+BahnFrei is an app for managing swimmer entry lists. It helps coaches and parents manage participants for competitions and displays a forecast of medal prospects based on entry times.
 
-## Lizenz
+## License
 
-Dieses Projekt steht unter der [MIT-Lizenz](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
