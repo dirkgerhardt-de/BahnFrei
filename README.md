@@ -1,4 +1,4 @@
-![BahnFrei Logo](docs/icon.png)
+![BahnFrei Logo](app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp)
 
 # BahnFrei
 
