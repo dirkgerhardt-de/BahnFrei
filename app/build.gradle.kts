@@ -20,10 +20,17 @@ android {
     }
 
     buildTypes {
+        debug {
+            isDebuggable = false
+            optimization {
+                enable = true
+            }
+        }
         release {
             optimization {
-                enable = false
+                enable = true
             }
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
     compileOptions {
